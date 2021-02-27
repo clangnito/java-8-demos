@@ -1,0 +1,22 @@
+import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         String text = "it is important that the result is stored as an";
+       List<String> list = new ArrayList<String>(Arrays.asList(text.split(" ")));
+        System.out.println(list.stream().filter(word -> !word.equals(""))
+                .collect(Collectors.toList())); 
+                
+         HashMap<String, Integer> capitalCities = new HashMap<String, Integer>();
+        for (int i = 0; i < list.size(); i++) {
+            capitalCities.put(list.get(i),list.get(i).length());
+            System.out.println(list.get(i));
+        }    
+         System.out.println(capitalCities);
+         System.out.println(list)  ;   
+     }
+}
